@@ -6,6 +6,7 @@ export const formatBlockData = (block: IBlock): IFormattedBlock => {
   tempBlock.gasLimit = gasLimit?.toString()
   tempBlock.gasUsed = gasUsed?.toString()
   tempBlock.baseFeePerGas = baseFeePerGas?.toString()
+  delete (remainingBlock as any)._difficulty
   const formattedBlock = { ...tempBlock, ...remainingBlock } as IFormattedBlock
   return formattedBlock
 }
