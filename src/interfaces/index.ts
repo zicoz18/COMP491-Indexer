@@ -63,4 +63,5 @@ export interface IFormattedTransaction {
   value: string
   nonde: number
   data: string
+  eventData?: string
 }
